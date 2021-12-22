@@ -46,7 +46,6 @@ img {
 .movie__container {
   display: grid;
   width: 300px;
-  cursor: pointer;
   background-color: var(--clr-light);
   border-radius: var(--br-container);
   margin: 0 auto;
@@ -58,15 +57,28 @@ img {
 }
 .movie__front .movie__img {
   border-radius: var(--br-img);
+  cursor: pointer;
 }
 .movie__front .movie__info {
-  margin: 10px 0px 20px 10px;
+  margin: 10px 0px 0px 10px;
 }
 .movie__front .movie__info .movie__title {
   font-weight: var(--fw-medium);
   font-size: x-large;
+  margin-bottom: var(--mg-letter);
 }
 .movie__front .movie__info .movie__year {
   font-weight: var(--fw-medium);
   font-size: large;
+}
+.movie__icon-watch {
+  width: 20%;
+  display: inline-block;
+  margin-left: auto;
+  margin-top: -30px;
+  cursor: pointer;
+}
+
+.movie__icon-watch:hover {
+  background-color: #f24646;
 }

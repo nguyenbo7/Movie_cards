@@ -81,4 +81,5 @@ img {
 
 .movie__icon-watch:hover {
   background-color: #f24646;
+  border-radius: 50%;
 }

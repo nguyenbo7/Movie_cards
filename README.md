@@ -1,6 +1,7 @@
 # TopKdrama_interface
-Only using html, css
-
+Only using html, css<br>
+View on codepen: https://codepen.io/nguyenbo7/pen/VwMBRLw<br>
+<br>
 Task: create movie card that contains:
 <ol>
     <li>Movie title</li>

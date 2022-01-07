@@ -16,8 +16,8 @@
   --clr-first: #f24646;
   --clr-second: #efc280;
 
-  --br-container: 20px;
-  --br-img: 20px 20px 0 0;
+  --br-container: 15px;
+  --br-img: 15px 15px 0 0;
 
   --mg-letter: 2px;
   --mg-small: 10px;
@@ -50,36 +50,71 @@ img {
   border-radius: var(--br-container);
   margin: 0 auto;
   margin-top: 100px;
+  position: relative;
 }
 .movie__front {
-  -webkit-transition: 250ms;
   transition: 250ms;
 }
-.movie__front .movie__img {
+.movie__img {
   border-radius: var(--br-img);
   cursor: pointer;
 }
 .movie__front .movie__info {
   margin: 10px 0px 0px 10px;
 }
-.movie__front .movie__info .movie__title {
+.movie__title {
   font-weight: var(--fw-medium);
   font-size: x-large;
   margin-bottom: var(--mg-letter);
 }
 .movie__front .movie__info .movie__year {
   font-weight: var(--fw-medium);
-  font-size: large;
+  font-size: medium;
 }
 .movie__icon-watch {
   width: 20%;
   display: inline-block;
   margin-left: auto;
-  margin-top: -30px;
+  margin-top: -35px;
   cursor: pointer;
 }
 
 .movie__icon-watch:hover {
   background-color: #f24646;
   border-radius: 50%;
+}
+.movie__back {
+  opacity: 0;
+  top: 55%;
+  width: 100%;
+
+  position: absolute;
+}
+.movie__back .movie__description {
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+.movie__back .movie__title {
+  color: var(--clr-first);
+}
+.movie__episode,
+.movie__tag,
+.movie__rate {
+  color: var(--clr-dark-second);
+  font-size: small;
+}
+.movie__summary {
+  font-size: small;
+  margin: 10px 0 20px 0;
+}
+.movie__container:hover .movie__front {
+  transform: translateY(-20%) scale(0.8);
+}
+.movie__container:hover .movie__info {
+  visibility: hidden;
+}
+.movie__container:hover .movie__back {
+  opacity: 1;
+  transition: transform 250ms ease, opacity 150ms linear;
+  transform: translateY(0);
 }
